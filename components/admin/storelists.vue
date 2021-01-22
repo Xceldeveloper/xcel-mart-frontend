@@ -17,7 +17,7 @@
       >
         <div id="item-img">
           <v-img
-            :src="formatImage(item.images)"
+            :src="item.images[0]"
             :aspect-ratio="1 / 1"
             contain
             class="grey lighten-2"
@@ -145,15 +145,18 @@ export default {
   },
   methods: {
     getTotalItem() {
-      this.$axios
-        .$get('/getcount?target=products')
-        .then((res) => {
-          this.totalItems = res
-          this.getLists()
-        })
-        .catch((error) => {
-          this.errorLoading = true
-        })
+      this.loading = true
+       this.totalItems = 15
+          this.getLists();
+      // this.$axios
+      //   .$get('/getcount?target=products')
+      //   .then((res) => {
+      //     this.totalItems = res
+      //     this.getLists()
+      //   })
+      //   .catch((error) => {
+      //     this.errorLoading = true
+      //   })
     },
     loadMore() {
       if (this.loadingMore) {
@@ -162,38 +165,171 @@ export default {
 
       this.loadingMore = true
 
-      this.$axios
-        .$get(
-          '/products?offset=' +
-            this.calcOffset(this.totalItems, this.items.length)
-        )
-        .then((res) => {
-          for (let i = 0; i < res.length; i++) {
-            this.items.push(res[i])
-          }
+      
+      setTimeout(() => {
+        this.loadingMore = false
 
-          this.loadingMore = false
-        })
-        .catch((error) => {
-          this.snackBarMedia = true
-          this.snackMessage = error
-          this.loadingMore = false
-        })
+        this.items.push(
+          {
+            id:29,
+            name: 'Can  water 50x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct1.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          },
+          {
+            id:234,
+            name: 'Can  water 10x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct2.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          },
+          {
+            id:685,
+            name: 'Can  water 50x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct1.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          },
+          {
+            id:456,
+            name: 'Can  water 50x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct1.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          },
+          {
+            id:78,
+            name: 'Can  water 10x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct2.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          }
+        )
+      }, 800)
+
+      // this.$axios
+      //   .$get(
+      //     '/products?offset=' +
+      //       this.calcOffset(this.totalItems, this.items.length)
+      //   )
+      //   .then((res) => {
+      //     for (let i = 0; i < res.length; i++) {
+      //       this.items.push(res[i])
+      //     }
+
+      //     this.loadingMore = false
+      //   })
+      //   .catch((error) => {
+      //     this.snackBarMedia = true
+      //     this.snackMessage = error
+      //     this.loadingMore = false
+      //   })
     },
     getLists() {
-      this.$axios
-        .$get('/products')
-        .then((res) => {
-          //  alert(res)
-          this.items = res
-          this.loading = false
-          this.errorLoading = false
-        })
-        .catch((error) => {
-          // alert(error)
-          this.loading = false
-          this.errorLoading = true
-        })
+   
+        this.errorLoading = false
+
+           setTimeout(() => {
+               this.loading = false
+        this.items.push(
+          {
+            id:67,
+            name: 'Can  water 50x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct1.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          },
+          {
+            id:16,
+            name: 'Can  water 10x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct2.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          },
+          {
+            id:343,
+            name: 'Can  water 50x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct1.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          },
+          {
+            id:34,
+            name: 'Can  water 50x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct1.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          },
+          {
+            id:12,
+            name: 'Can  water 10x',
+            price: 100,
+            description: 'Very taseful',
+            images: [require('~/static/canproduct2.png')],
+            minimum_per_order: 5,
+            maximum_per_order: 1000000,
+            cart_count: 150,
+            order_count: 80,
+            created_at: '',
+            updated_at: '',
+          }
+        )
+      }, 1000)
     },
     linkTo(id) {
       this.$emit('openUrl', { url: '/admin/item/' + id, history: true })

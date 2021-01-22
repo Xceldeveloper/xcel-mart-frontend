@@ -130,6 +130,7 @@ export default {
 
         this.items.push(
           {
+             id:34,
             name: 'Can  water 50x',
             price: 100,
             description: 'Very taseful',
@@ -141,7 +142,8 @@ export default {
             created_at: '',
             updated_at: '',
           },
-          {
+          { 
+            id:23,
             name: 'Can  water 10x',
             price: 100,
             description: 'Very taseful',
@@ -154,6 +156,7 @@ export default {
             updated_at: '',
           },
           {
+            id:56,
             name: 'Can  water 50x',
             price: 100,
             description: 'Very taseful',
@@ -166,6 +169,7 @@ export default {
             updated_at: '',
           },
           {
+            id:45,
             name: 'Can  water 50x',
             price: 100,
             description: 'Very taseful',
@@ -178,6 +182,7 @@ export default {
             updated_at: '',
           },
           {
+            id:87,
             name: 'Can  water 10x',
             price: 100,
             description: 'Very taseful',
@@ -258,6 +263,7 @@ export default {
 
         this.items.push(
           {
+            id:87,
             name: 'Can  water 50x',
             price: 100,
             description: 'Very taseful',
@@ -270,6 +276,7 @@ export default {
             updated_at: '',
           },
           {
+            id:12,
             name: 'Can  water 10x',
             price: 100,
             description: 'Very taseful',
@@ -282,6 +289,7 @@ export default {
             updated_at: '',
           },
           {
+            id:67,
             name: 'Can  water 50x',
             price: 100,
             description: 'Very taseful',
@@ -294,6 +302,7 @@ export default {
             updated_at: '',
           },
           {
+            id:89,
             name: 'Can  water 50x',
             price: 100,
             description: 'Very taseful',
@@ -306,6 +315,7 @@ export default {
             updated_at: '',
           },
           {
+            id:56,
             name: 'Can  water 10x',
             price: 100,
             description: 'Very taseful',

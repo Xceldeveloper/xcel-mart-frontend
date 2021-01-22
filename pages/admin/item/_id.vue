@@ -223,31 +223,43 @@ export default {
       this.errorLoading = false
       this.isloading = true
 
-      this.$axios
-        .$get('/products?id=' + this.item.id)
-        .then((res) => {
-          if (res.length > 0) {
-            var data = res[0]
-            this.item.title = data.name
-            this.item.price = data.price
-            this.item.images = data.images
-            this.item.description = data.description
-            this.item.min_quantity = data.minimum_per_order
+        setTimeout(()=>{
+           
+            this.item.title = "Can water 50x"
+            this.item.price = 100
+            this.item.description = "Very tasteful"
+            this.item.min_quantity = 10
+             this.item.max_quantity  = 100000
+             this.item.images = [{src:require('~/static/cover1.png')},{src:require('~/static/canproduct2.png')},{src:require('~/static/canproduct1.png')}]
+             this.isloading = false
+      
+      },600)
 
-            this.item.max_quantity =
-              data.maximum_per_order == null || data.maximum_per_order == ''
-                ? 10000
-                : data.maximum_per_order
-            this.isloading = false
-          } else {
-            //item doesnt exist oh
-            this.openNewPage('/', false, true)
-          }
-        })
-        .catch((error) => {
-          this.errorLoading = true
-          this.isloading = false
-        })
+      // this.$axios
+      //   .$get('/products?id=' + this.item.id)
+      //   .then((res) => {
+      //     if (res.length > 0) {
+      //       var data = res[0]
+      //       this.item.title = data.name
+      //       this.item.price = data.price
+      //       this.item.images = data.images
+      //       this.item.description = data.description
+      //       this.item.min_quantity = data.minimum_per_order
+
+      //       this.item.max_quantity =
+      //         data.maximum_per_order == null || data.maximum_per_order == ''
+      //           ? 10000
+      //           : data.maximum_per_order
+      //       this.isloading = false
+      //     } else {
+      //       //item doesnt exist oh
+      //       this.openNewPage('/', false, true)
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     this.errorLoading = true
+      //     this.isloading = false
+      //   })
     },
 
     deleteItem() {

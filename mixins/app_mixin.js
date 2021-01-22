@@ -1,7 +1,7 @@
 export default {
    data() {
        return {
-        AppName:'Xcel Mart',
+        AppName:'XcelMart',
         Colors: {
             backgroundColor: '#f5f5f5',
             textTureColor: '#ffffff',
