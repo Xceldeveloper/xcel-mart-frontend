@@ -14,7 +14,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: 'Xcel Mart by xceldeveloper',
+    titleTemplate: 'XcelMart by xceldeveloper',
     title: '',
     meta: [{
         charset: 'utf-8'
@@ -72,10 +72,10 @@ export default {
   ],
   pwa: {
     manifest: {
-      name: 'Xcel Mart',
-      short_name: 'Xcel Mart',
+      name: 'XcelMart',
+      short_name: 'XcelMart',
       lang: 'en',
-      display: 'standalone',
+      display: 'fullscreen',
       theme_color: '#002857',
       background_color: '#ffffff',
       "orientation": "portrait",
@@ -97,25 +97,6 @@ export default {
     }
   },
 
-  firebase: {
-    config: {
-      apiKey: "AIzaSyAVsut2Ne_azDVdYOtOcuQpSKMQytmG2qI",
-      authDomain: "mawatersofficial.firebaseapp.com",
-      databaseURL: "https://mawatersofficial.firebaseio.com",
-      projectId: "mawatersofficial",
-      storageBucket: "mawatersofficial.appspot.com",
-      messagingSenderId: "373939331171",
-      appId: "1:373939331171:web:78127a920a0354e8a91856",
-      measurementId: "G-9522265EY0"
-    },
-    onFirebaseHosting: false,
-    services: {
-      firestore: true,
-      functions: false,
-      storage: true,
-      analytics: true,
-    }
-  },
   /*
    ** Nuxt.js modules
    */
