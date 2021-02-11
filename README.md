@@ -2,6 +2,8 @@
 
 [demo url](https://xcelmart.netlify.app/)
 
+A minimal e-store 
+
 
 
 ## Build Setup
